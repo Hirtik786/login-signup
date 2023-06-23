@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyDs2CKMiUmA2xkOKdImMEo2Elgw16hPSGo",
+        authDomain: "web-development-6e20c.firebaseapp.com",
+        projectId: "web-development-6e20c",
+        storageBucket: "web-development-6e20c.appspot.com",
+        messagingSenderId: "284418049133",
+        appId: "1:284418049133:web:76c36075a9a2880563eb64",
+        measurementId: "G-T8NRJ8B6F9",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <div class="form-modal">
+      <div id="login-form">
+        <form>
+          <p style="padding-top: 30px;">
+            Your email is not verified, Click the button to send verification
+            email.
+          </p>
+          <button type="button" class="btn login" onclick="sendVerificationEmail()">
+            Send Verification Email
+          </button>
+          <p>
+            <a href="javascript:void(0)"
+              ><a href="index.html">Back To Login</a></a>
+          </p>
+          <hr />
+          <p class="messageclass" id="message2"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
+</html>

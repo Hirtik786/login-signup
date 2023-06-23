@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script type="module">
+        const firebaseConfig = {
+          apiKey: "AIzaSyDs2CKMiUmA2xkOKdImMEo2Elgw16hPSGo",
+          authDomain: "web-development-6e20c.firebaseapp.com",
+          projectId: "web-development-6e20c",
+          storageBucket: "web-development-6e20c.appspot.com",
+          messagingSenderId: "284418049133",
+          appId: "1:284418049133:web:76c36075a9a2880563eb64",
+          measurementId: "G-T8NRJ8B6F9"
+        };
+        firebase.initializeApp(firebaseConfig)
+      </script>
+  </head>
+  <body>
+    <div class="form-modal">
+      <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">log in</button>
+        <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+      </div>
+
+      <div id="login-form">
+        <form>
+          <input type="text" placeholder="Enter email" id="email" name="email" />
+          <input type="password" placeholder="Enter password" id="password"/>
+          <button type="button" class="btn login" onclick="login()">login</button>
+          <button type="button" class="btn login" onclick="loginWithGoogle()">login With Google</button>
+          <p><a href="javascript:void(0)"><a href="forgotPassword.html">Forgotten account</a></a></p>
+          <hr />
+          <p class="messageclass" id="message1"></p>
+        </form>
+      </div>
+
+      <div id="signup-form">
+        <form>
+          <input type="email" placeholder="Enter your email" name="email" id="email1" />
+          <input type="password" placeholder="Create password" id="password1" />
+          <button type="button" class="btn signup" onclick="createAccount()">create account</button>
+          <hr />
+          <p class="messageclass" id="message"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
+</html>
