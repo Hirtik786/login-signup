@@ -135,6 +135,7 @@ let deleteAccount = () => {
     });
 };
 
+var provider = new firebase.auth.GoogleAuthProvider();
 let loginWithGoogle = () => {
   firebase
     .auth()
