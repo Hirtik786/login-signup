@@ -150,11 +150,7 @@ let loginWithGoogle = () => {
       window.location.assign("homepage.html");
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      var email = error.email;
-      var credential = error.credential;
-      console.log("login with google error");
+      console.log("login with google error", error.message);
       // ...
     });
 };
