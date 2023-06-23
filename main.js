@@ -102,6 +102,9 @@ let sendVerificationEmail = () => {
       message2.style.display = "block"
       message2.style.color = "green"
       message2.innerHTML = "Verification email sent successfully"
+      setTimeout(() => {
+        message2.style.display = "none"
+      }, 1000);
     });
 };
 
@@ -154,3 +157,31 @@ let loginWithGoogle = () => {
       // ...
     });
 };
+
+let message3 = document.getElementById("message3")
+let updateEmail = ()=>{
+  window.location.assign("updateEmail.html")
+}
+let updateEmailInput = document.getElementById("updateEmailInput")
+
+let updateemail = () =>{
+  const user = firebase.auth().currentUser;
+
+user.updateEmail(updateEmailInput.value).then(() => {
+  console.log("Update email successfull");
+  message2.style.display = "block"
+  message2.style.color = "green"
+  message2.innerHTML = "Email update successfully"
+  setTimeout(() => {
+    message2.style.display = "none"
+  }, 1000);
+}).catch((error) => {
+  console.log("update email error" , error.message)
+  message2.style.display = "block"
+  message2.style.color = "red"
+  message2.innerHTML = error.message
+  setTimeout(() => {
+    message2.style.display = "none"
+  }, 1000);
+});
+}
